@@ -4,12 +4,18 @@
     Vue.createApp({
         data(){
             return{
-                awesome: true
+                awesome: 0
             }
-        }
+        },
         methods:{
             toggle(){
-                this.awesome !== this.awesome
+                if (this.awesome <2){ 
+                    this.awesome++ 
+                } 
+                else{
+                    this.awesome = 0
+                }
+                    
             }
         }
 
@@ -19,6 +25,7 @@
 
 <div id="app">
 <button @click="toggle"> toggle </button>
-<h1> Vue is awesome! </h1>
-<h1> Oh no 😥</h1>
+<h1 v-if="awesome == 0"> Vue is awesome! </h1>
+<h1 v-if="awesome == 1"> for real! </h1>
+<h1 v-if="awesome == 2"> it is really cool! </h1>
 </div>
