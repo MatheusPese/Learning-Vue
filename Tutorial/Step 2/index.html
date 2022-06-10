@@ -1,0 +1,17 @@
+<script src="https://unpkg.com/vue@3"></script>
+
+<script type="module">
+    Vue.createApp({
+        data() {
+            return {
+                message: 'Hello, my name is ',
+                name: 'Matheus'
+            }
+        }
+    
+    }).mount('#app')
+    </script>
+
+<div id="app">
+    <h1>{{message}}{{name}}</h1>
+</div>
