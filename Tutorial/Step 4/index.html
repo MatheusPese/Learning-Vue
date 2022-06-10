@@ -4,14 +4,21 @@
     Vue.createApp({
         data() {
             return {
-                count: 0
+                count: 4
+            }
+        },
+
+        methods: {
+            increment(){
+                this.count++
             }
         }
     }).mount('#app')
 
 </script>
 
-
-<div id="app">
-    {{count}}
-</div>
+<body>
+    <div id="app">
+        <button @click="increment">{{count}}</button>
+    </div>
+</body>
