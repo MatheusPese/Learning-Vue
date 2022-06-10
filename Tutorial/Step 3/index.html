@@ -1,0 +1,20 @@
+<script src="https://unpkg.com/vue@3"></script>
+
+<script type="module">
+   Vue.createApp({
+      data() {
+        return {
+          titleClass: 'title'
+        }
+      }
+    }).mount('#app')
+</script>
+
+
+<div id="app">
+    <h1 :class="titleClass">Make me red</h1>
+</div>
+
+<style>
+    @import './style.css';
+</style>
