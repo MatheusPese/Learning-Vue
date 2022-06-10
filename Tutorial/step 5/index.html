@@ -1,0 +1,19 @@
+<script src="https://unpkg.com/vue@3"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.7.0/validator.min.js"></script>
+<script type="module">
+
+Vue.createApp({
+    data(){
+        return{
+            input:""
+        }
+    }
+
+}).mount("#app")
+
+</script>
+
+<div id="app">
+    <input v-model="input" placeholder="Type Here">
+    <p style="color:red; font-weight:bold;">{{input.toUpperCase()}}</p>
+</div>
